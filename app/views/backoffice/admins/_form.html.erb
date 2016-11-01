@@ -22,14 +22,16 @@
 
 <div class="panel-body">
  <div class="col-lg-6">
-   <%= form_for ([:backoffice, @admin]), html:{class:"form-group"} do |f| %>
-   	<%= f.label :email %>
-   	<%= f.text_field :email, class:"form-control", placeholder:"Ex: juca@gmail.com" %>
-    <%= f.label :password %>
-    <%= f.password_field :password, class:"form-control", placeholder:"Ex: 123456" %>
-    <%= f.label :password_confirmation %>
-    <%= f.password_field :password_confirmation, class:"form-control", placeholder:"Ex: 123456" %>
-   	<button type="submit" class="btn btn-default">Salvar</button>
-   <% end %>
+  <%= form_for ([:backoffice, @admin]), html:{class:"form-group"} do |f| %>
+  <%= f.label :nome %>
+  <%= f.text_field :name, class:"form-control", placeholder:"Ex: Juca da Silva" %>
+ 	<%= f.label :email %>
+ 	<%= f.text_field :email, class:"form-control", placeholder:"Ex: juca@gmail.com" %>
+  <%= f.label :password %>
+  <%= f.password_field :password, class:"form-control", placeholder:"Ex: 123456" %>
+  <%= f.label :password_confirmation %>
+  <%= f.password_field :password_confirmation, class:"form-control", placeholder:"Ex: 123456" %>
+ 	<button type="submit" class="btn btn-default">Salvar</button>
+ <% end %>
 </div> <!-- /.col-lg-6 -->
 </div> <!-- /.panel-body -->
