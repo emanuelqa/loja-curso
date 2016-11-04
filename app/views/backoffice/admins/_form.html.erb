@@ -1,4 +1,4 @@
-<h1 class="page-header">Adeministrador</h1>
+<h1 class="page-header"><%= @admin.model_name.human(count: 2) %></h1>
 
 <% if @admin.errors.any? %>
 	
@@ -16,14 +16,14 @@
 <% end %>  
 <div class="panel panel-default">
   <div class="panel-heading">
-    <%= action %>
+    <%= action_message %>
   </div>		        
 	<!-- /.panel-heading -->
 
 <div class="panel-body">
  <div class="col-lg-6">
   <%= form_for ([:backoffice, @admin]), html:{class:"form-group"} do |f| %>
-  <%= f.label :nome %>
+  <%= f.label :name %>
   <%= f.text_field :name, class:"form-control", placeholder:"Ex: Juca da Silva" %>
  	<%= f.label :email %>
  	<%= f.text_field :email, class:"form-control", placeholder:"Ex: juca@gmail.com" %>
